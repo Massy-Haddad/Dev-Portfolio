@@ -7,6 +7,13 @@ import { LuGraduationCap } from 'react-icons/lu'
 import figurestoreImg from '@/public/assets/projects/figure-store.png'
 import hashiraImg from '@/public/assets/projects/hashira.png'
 
+export const socials = [
+	{
+		title: 'Github',
+		href: 'https://github.com/Massy-Haddad',
+	},
+] as const
+
 export const routes = [
 	{
 		title: 'Accueil',
