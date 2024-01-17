@@ -26,9 +26,9 @@ export default function Header() {
 			exit={{ y: -10, opacity: 0 }}
 			transition={{ duration: 1, ease: 'easeOut' }}
 			className={clsx(
-				'sticky inset-x-0 top-0 z-40 w-full flex-none backdrop-blur duration-200 lg:border-b bg-gray-900/0 dark:bg-transparent border-transparent',
+				'sticky inset-x-0 top-0 z-40 w-full flex-none backdrop-blur duration-200 lg:border-b bg-slate-900/0 dark:bg-transparent border-transparent',
 				{
-					'bg-gray-50/50 lg:border-slate-900/10 dark:border-slate-50/[0.06]':
+					'bg-slate-50/50 lg:border-slate-900/10 dark:border-slate-50/[0.06]':
 						scrolled,
 				}
 			)}
@@ -37,7 +37,7 @@ export default function Header() {
 				<div className="py-4 lg:px-8 mx-4 lg:mx-0">
 					<div className="relative flex items-center justify-between">
 						<Link
-							href={'/'}
+							href={routes[0].href}
 							className="text-xl mr-3 md:w-auto lg:text-3xl transition-all duration-500"
 							onClick={() => {
 								setActiveSection(routes[0].title)
@@ -73,9 +73,9 @@ export default function Header() {
 										<li key={link.title} className="">
 											<Link
 												className={clsx(
-													'hover:text-gray-950 transition dark:text-gray-500 dark:hover:text-gray-300',
+													'hover:text-slate-950 transition dark:text-slate-500 dark:hover:text-slate-300',
 													{
-														'text-gray-950 dark:text-gray-300':
+														'text-slate-950 dark:text-slate-100':
 															activeSection === link.title,
 													}
 												)}

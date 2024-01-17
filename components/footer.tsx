@@ -5,9 +5,9 @@ export default function Footer() {
 				&copy; 2024 MASSY. ALL RIGHT RESERVED.
 			</small>
 			<p className="text-xs">
-				<span className="font-semibold">À propos de ce Portfolio:</span> Réalisé
-				avec React & Next.js 13 (App Router & Server Actions), TypeScript,
-				Tailwind CSS, Framer Motion, React Email & Resend et Vercel hosting.
+				Réalisé avec React & Next.js 13 (App Router & Server Actions),
+				TypeScript, Tailwind CSS, Framer Motion, React Email & Resend et Vercel
+				hosting.
 			</p>
 		</footer>
 	)
