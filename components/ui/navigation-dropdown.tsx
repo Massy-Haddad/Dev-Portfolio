@@ -25,7 +25,7 @@ export default function NavigationDropdown() {
 				leaveTo="transform opacity-0 scale-95"
 			>
 				<Menu.Items className="text-inherit absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white dark:bg-slate-900 bg-opacity-90 backdrop-filter backdrop-blur-sm py-1 shadow-lg ring-1 ring-slate-900 dark:ring-slate-700 ring-opacity-5 focus:outline-none">
-					{routes.map((link) => (
+					{routes.slice(1).map((link) => (
 						<Menu.Item key={link.title} as={Fragment}>
 							{({ active }) => (
 								<Link
