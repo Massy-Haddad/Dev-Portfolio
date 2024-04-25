@@ -1,6 +1,6 @@
 'use client'
-import Link from 'next/link'
-import Image from 'next/image'
+import Link from "next/link";
+//import Image from 'next/image'
 import clsx from 'clsx'
 import { motion } from 'framer-motion'
 
@@ -9,7 +9,7 @@ import { routes, socials } from '@/lib/data'
 import { useScrollTop } from '@/hooks/use-scroll-top'
 import { useActiveSectionContext } from '@/context/active-section-context'
 
-import Logo from '@/public/assets/logo.png'
+//import Logo from '@/public/assets/logo.png'
 import { NavigationDropdown } from '@/components/ui'
 import { BsArrowRightShort, BsGithub } from 'react-icons/bs'
 
