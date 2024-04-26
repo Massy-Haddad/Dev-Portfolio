@@ -74,20 +74,23 @@ export const projectsData = [
 		description:
 			'Mon premier projet e-commerce. Le thème de celui-ci est en lien avec la pop culture, à savoir les figurines.',
 		tags: ['React', 'Next.js', 'Framer', 'Sanity', 'All'],
-		imageUrl: figurestoreImg,
+		//imageUrl: figurestoreImg,
+		imageUrl: '/assets/projects/figure-store.png',
 	},
 	{
 		title: 'Portfolio (ancien)',
 		description:
 			'Mon ancien portfolio de développeur (celui-ci est toujours en ligne, mais ne sera plus mis à jour).',
 		tags: ['React', 'Framer', 'Sanity.io', 'All'],
+		imageUrl: '/assets/projects/figure-store.png',
 	},
 	{
 		title: 'Hashira',
 		description:
 			"Un projet de UI/UX dans lequel j'ai implémenté une maquette de Figma. (Crédit à l'auteur de la maquette : Adi Bivaga)",
 		tags: ['React', 'Scss', 'All'],
-		imageUrl: hashiraImg,
+		//imageUrl: hashiraImg,
+		imageUrl: '/assets/projects/hashira.png',
 	},
 ] as const
 

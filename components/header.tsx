@@ -23,8 +23,10 @@ export default function Header() {
 		<motion.header
 			initial={{ y: 10, opacity: 0 }}
 			animate={{ y: 0, opacity: 1 }}
-			exit={{ y: -10, opacity: 0 }}
-			transition={{ duration: 1, ease: 'easeOut' }}
+			transition={{
+				duration: 0.5,
+				damping: 20,
+			}}
 			className={clsx(
 				'sticky inset-x-0 top-0 z-40 w-full flex-none backdrop-blur duration-200 lg:border-b bg-slate-900/0 dark:bg-transparent border-transparent',
 				{
