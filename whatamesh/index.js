@@ -4,10 +4,18 @@ import { useState, useEffect, useMemo } from 'react'
 import { Gradient } from './Gradient'
 
 const Whatamesh = ({
-	gradientColor1 = '#177373',
-	gradientColor2 = '#255459',
-	gradientColor3 = '#032326',
-	gradientColor4 = '#D98B8B',
+	// Black to White
+	// gradientColor1 = '#040404',
+	// gradientColor2 = '#a1a1a1',
+	// gradientColor3 = '#515151',
+	// gradientColor4 = '#040404',
+
+	// Full black
+	gradientColor1 = '#040404',
+	gradientColor2 = '#515151',
+	gradientColor3 = '#040404',
+	gradientColor4 = '#040404',
+
 	isDataTransitionIn = true,
 	isDarkenTop = false,
 }) => {
