@@ -20,25 +20,25 @@ export const routes = [
 		href: '#home',
 	},
 	{
-		title: 'À propos',
-		href: '#about',
-	},
-	{
 		title: 'Projets',
 		href: '#projects',
 	},
 	{
-		title: 'Compétences',
-		href: '#skills',
+		title: 'À propos',
+		href: '#about',
 	},
-	{
-		title: 'Expérience',
-		href: '#experience',
-	},
-	{
-		title: 'Contact',
-		href: '#contact',
-	},
+	// {
+	// 	title: 'Compétences',
+	// 	href: '#skills',
+	// },
+	// {
+	// 	title: 'Expérience',
+	// 	href: '#experience',
+	// },
+	// {
+	// 	title: 'Contact',
+	// 	href: '#contact',
+	// },
 ] as const
 
 export const experiencesData = [

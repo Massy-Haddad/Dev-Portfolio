@@ -1,17 +1,16 @@
 'use client'
 import Link from 'next/link'
-import Image from 'next/image'
-import clsx from 'clsx'
 import { motion } from 'framer-motion'
 
-
+import clsx from 'clsx'
 import { routes, socials } from '@/lib/data'
 import { useScrollTop } from '@/hooks/use-scroll-top'
 import { useActiveSectionContext } from '@/context/active-section-context'
 
-import Logo from '@/public/assets/logo.png'
-import { NavigationDropdown } from '@/components/ui'
-import { BsArrowRightShort, BsGithub } from 'react-icons/bs'
+console.log(
+	'%c Dev by - Massy Haddad -  https://massyh.com',
+	'background: #1A1A1B; color: #F7ECDD; padding: 15px'
+)
 
 export default function Header() {
 	const scrolled = useScrollTop()
@@ -21,92 +20,43 @@ export default function Header() {
 
 	return (
 		<motion.header
-			initial={{ y: 10, opacity: 0 }}
+			initial={{ y: -10, opacity: 0 }}
 			animate={{ y: 0, opacity: 1 }}
-			exit={{ y: -10, opacity: 0 }}
+			exit={{ y: 0, opacity: 0 }}
 			transition={{ duration: 1, ease: 'easeOut' }}
-			className={clsx(
-				'sticky inset-x-0 top-0 z-40 w-full flex-none backdrop-blur duration-200 lg:border-b bg-slate-900/0 dark:bg-transparent border-transparent',
-				{
-					'bg-slate-50/50 lg:border-slate-900/10 dark:border-slate-50/[0.06]':
-						scrolled,
-				}
-			)}
+			className="flex justify-between items-center w-full h-[5.5rem] py-0 px-12 fixed top-0 left-0 z-10 mix-blend-difference pt-6"
 		>
-			<div className="max-w-8xl mx-auto">
-				<div className="py-4 lg:px-8 mx-4 lg:mx-0">
-					<div className="relative flex items-center justify-between">
-						<Link
-							href={routes[0].href}
-							className="text-xl mr-3 md:w-auto lg:text-3xl transition-all duration-500"
+			<h1 className="text-3xl ">
+				<Link href="/">Massy H.</Link>
+			</h1>
+
+			<nav className="flex tracking-tighter">
+				{routes.slice(1).map((route, index) => (
+					<Link key={index} href={route.href}>
+						<button
+							key={index}
+							className={clsx('button2', {
+								active: activeSection === route,
+							})}
 							onClick={() => {
-								setActiveSection(routes[0].title)
+								setActiveSection(route)
 								setTimeOfLastClick(Date.now())
 							}}
 						>
-							{/* <Image
-								src={Logo}
-								alt="Massy Logo"
-								width={150}
-								height={150}
-								className="block w-100 h-auto dark:brightness-200"
-							/> */}
-							<span className="text-slate-900 dark:text-slate-200 w-auto h-5">
-								MASSY
-							</span>
-						</Link>
+							<span className="btn-text-one">{route.title}</span>
+							<span className="btn-text-two">{route.title}</span>
+						</button>
+					</Link>
+				))}
+			</nav>
 
-						<Link
-							href={'/'}
-							className="ml-3 text-xs leading-5 font-medium rounded-full py-1 px-3 hidden xl:flex items-center bg-slate-400/10 hover:bg-slate-400/20 dark:highlight-white/5"
-						>
-							dev
-							<span className="ml-1 overflow-visible text-current">
-								<BsArrowRightShort />
-							</span>
-						</Link>
-
-						<div className="relative hidden lg:flex items-center ml-auto">
-							<nav className="text-sm leading-6 font-semibold text-slate-500 dark:text-slate-800">
-								<ul className="flex space-x-8">
-									{routes.slice(1).map((link) => (
-										<li key={link.title} className="">
-											<Link
-												className={clsx(
-													'hover:text-slate-950 transition dark:text-slate-500 dark:hover:text-slate-300',
-													{
-														'text-slate-950 dark:text-slate-100':
-															activeSection === link.title,
-													}
-												)}
-												href={link.href}
-												onClick={() => {
-													setActiveSection(link.title)
-													setTimeOfLastClick(Date.now())
-												}}
-											>
-												{link.title}
-											</Link>
-										</li>
-									))}
-								</ul>
-							</nav>
-							<div className="flex items-center border-l border-slate-200 ml-6 pl-6 dark:border-slate-800">
-								<Link
-									href={socials[0].href}
-									className="ml-6 block text-slate-400 hover:text-slate-500 dark:hover:text-slate-300"
-								>
-									<span className="w-5 h-5">
-										<BsGithub />
-									</span>
-								</Link>
-							</div>
-						</div>
-
-						{/* Mobile content */}
-						<NavigationDropdown />
-					</div>
-				</div>
+			<div>
+				<Link href="/">
+					<button className="button2 marquee">
+						<span className="btn-text-one">available for work</span>
+						<span className="btn-text-two">available for work</span>
+					</button>
+				</Link>
 			</div>
 		</motion.header>
 	)
