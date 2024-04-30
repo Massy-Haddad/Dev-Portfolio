@@ -30,7 +30,7 @@ export default function Header() {
 				<Link href="/">Massy H.</Link>
 			</h1>
 
-			<nav className="flex tracking-tighter">
+			<nav className="flex">
 				{routes.slice(1).map((route, index) => (
 					<Link key={index} href={route.href}>
 						<button

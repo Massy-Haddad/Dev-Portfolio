@@ -10,11 +10,13 @@ import {
 	Contact,
 	Footer,
 } from '@/components'
+import { Cursor } from '@/components/ui'
 
 export default function Home() {
 	return (
-		<main className="">
+		<main>
 			{/* <Banner /> */}
+			<Cursor />
 			<Header />
 			<Intro />
 			<About />
