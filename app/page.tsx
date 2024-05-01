@@ -2,7 +2,7 @@
 import {
 	Banner,
 	Header,
-	Intro,
+	Hero,
 	About,
 	Projects,
 	Skills,
@@ -18,11 +18,11 @@ export default function Home() {
 			{/* <Banner /> */}
 			<Cursor />
 			<Header />
-			<Intro />
+			<Hero />
 			<About />
 			<Projects />
-			<Skills />
-			<Experience />
+			{/* <Skills /> */}
+			{/* <Experience /> */}
 			<Contact />
 			<Footer />
 		</main>

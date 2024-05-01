@@ -24,9 +24,9 @@ export default function Header() {
 			animate={{ y: 0, opacity: 1 }}
 			exit={{ y: 0, opacity: 0 }}
 			transition={{ duration: 1, ease: 'easeOut' }}
-			className="flex justify-between items-center w-full h-[5.5rem] py-0 px-12 fixed top-0 left-0 z-10 mix-blend-difference pt-6"
+			className="flex justify-between items-center w-full h-28 px-20 pt-9 fixed top-0 left-0 z-10 mix-blend-difference"
 		>
-			<h1 className="text-3xl ">
+			<h1 className="text-5xl ">
 				<Link href="/">Massy H.</Link>
 			</h1>
 

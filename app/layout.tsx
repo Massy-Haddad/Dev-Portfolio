@@ -5,12 +5,7 @@ import { ThemeSwitch, Banner, Header, Footer } from '@/components'
 import ActiveSectionContextProvider from '@/context/active-section-context'
 
 import localFont from 'next/font/local'
-const myFont = localFont({ src: '../fonts/against regular.otf' })
-
-/* Old way to import google font
-import { Inter } from 'next/font/google'
-const inter = Inter({ subsets: ['latin'] }) 
-*/
+const myFont = localFont({ src: '../fonts/PPTelegraf-Regular.otf' })
 
 export const metadata = {
 	title: 'Massy | Portfolio',

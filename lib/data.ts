@@ -16,15 +16,15 @@ export const socials = [
 
 export const routes = [
 	{
-		title: 'Accueil',
+		title: 'Home',
 		href: '#home',
 	},
 	{
-		title: 'Projets',
+		title: 'Projects',
 		href: '#projects',
 	},
 	{
-		title: 'À propos',
+		title: 'About',
 		href: '#about',
 	},
 	// {
