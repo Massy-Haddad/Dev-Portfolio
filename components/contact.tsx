@@ -1,10 +1,14 @@
+'use client'
+
 export default function Contact() {
 	return (
 		<section
 			id="contact"
-			className="scroll-mt-28 flex justify-center items-center min-h-[50vh] w-full"
+			className="contact flex justify-center items-center h-[calc(100vh-14rem)] w-screen mix-blend-difference"
 		>
-			Contact
+			<div className="h-full w-[calc(100%-9rem)] flex items-center justify-center mx-20 rounded-[2.5rem]">
+				<p>contact</p>
+			</div>
 		</section>
 	)
 }

@@ -12,6 +12,10 @@ export const socials = [
 		title: 'Github',
 		href: 'https://github.com/Massy-Haddad',
 	},
+	{
+		title: 'LinkedIn',
+		href: 'https://www.linkedin.com/in/massy-haddad/',
+	},
 ] as const
 
 export const routes = [

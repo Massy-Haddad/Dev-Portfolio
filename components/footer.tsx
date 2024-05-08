@@ -1,14 +1,24 @@
+import Link from 'next/link'
+import { Button } from './ui'
+import { socials } from '@/lib/data'
+
 export default function Footer() {
 	return (
-		<footer className="mb-10 px-4 text-center text-gray-500">
-			<small className="mb-2 block text-xs">
-				&copy; 2024 MASSY. ALL RIGHT RESERVED.
-			</small>
-			<p className="text-xs">
-				Réalisé avec React & Next.js 13 (App Router & Server Actions),
-				TypeScript, Tailwind CSS, Framer Motion, React Email & Resend et Vercel
-				hosting.
-			</p>
+		<footer className="flex justify-between items-center w-full h-[10vh] px-[4.5rem] pb-9 mix-blend-difference text-[1.2rem]">
+			<p className="tracking-normal">Feel free to conect with me on Socials</p>
+			<nav className="flex">
+				{socials.map((social, index) => {
+					return (
+						<Link key={index} href={social.href} target="blank">
+							<Button
+								key={index}
+								text={social.title}
+								className="block last:mr-0"
+							/>
+						</Link>
+					)
+				})}
+			</nav>
 		</footer>
 	)
 }

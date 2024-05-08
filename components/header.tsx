@@ -3,9 +3,10 @@ import Link from 'next/link'
 import { motion } from 'framer-motion'
 
 import clsx from 'clsx'
-import { routes, socials } from '@/lib/data'
+import { routes } from '@/lib/data'
 import { useScrollTop } from '@/hooks/use-scroll-top'
 import { useActiveSectionContext } from '@/context/active-section-context'
+import { Button } from './ui'
 
 console.log(
 	'%c Dev by - Massy Haddad -  https://massyh.com',
@@ -24,7 +25,7 @@ export default function Header() {
 			animate={{ y: 0, opacity: 1 }}
 			exit={{ y: 0, opacity: 0 }}
 			transition={{ duration: 1, ease: 'easeOut' }}
-			className="flex justify-between items-center w-full h-28 px-20 pt-9 fixed top-0 left-0 z-10 mix-blend-difference"
+			className="flex justify-between items-center w-full h-28 px-[4.5rem] pt-9 fixed top-0 left-0 z-10 mix-blend-difference"
 		>
 			<h1 className="text-5xl ">
 				<Link href="/">Massy H.</Link>
@@ -33,29 +34,14 @@ export default function Header() {
 			<nav className="flex">
 				{routes.slice(1).map((route, index) => (
 					<Link key={index} href={route.href}>
-						<button
-							key={index}
-							className={clsx('button2', {
-								active: activeSection === route,
-							})}
-							onClick={() => {
-								setActiveSection(route)
-								setTimeOfLastClick(Date.now())
-							}}
-						>
-							<span className="btn-text-one">{route.title}</span>
-							<span className="btn-text-two">{route.title}</span>
-						</button>
+						<Button text={route.title} className="block" />
 					</Link>
 				))}
 			</nav>
 
 			<div>
-				<Link href="/">
-					<button className="button2 marquee">
-						<span className="btn-text-one">available for work</span>
-						<span className="btn-text-two">available for work</span>
-					</button>
+				<Link href="/#contact">
+					<Button text="Available for work" className="block marquee" />
 				</Link>
 			</div>
 		</motion.header>
