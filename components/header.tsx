@@ -14,17 +14,29 @@ console.log(
 )
 
 export default function Header() {
-	const scrolled = useScrollTop()
+	const scrolledTop = useScrollTop()
 
-	const { activeSection, setActiveSection, setTimeOfLastClick } =
-		useActiveSectionContext()
+	const menu = {
+		visible: {
+			y: 0,
+			transition: { duration: 0.75, type: 'tween', ease: [0.76, 0, 0.24, 1] },
+		},
+		hidden: {
+			y: '-100%',
+			transition: {
+				duration: 0.75,
+				// delay: 0.35,
+				type: 'tween',
+				ease: [0.76, 0, 0.24, 1],
+			},
+		},
+	}
 
 	return (
 		<motion.header
-			initial={{ y: -10, opacity: 0 }}
-			animate={{ y: 0, opacity: 1 }}
-			exit={{ y: 0, opacity: 0 }}
-			transition={{ duration: 1, ease: 'easeOut' }}
+			variants={menu}
+			initial="visible"
+			animate={scrolledTop ? 'hidden' : 'visible'}
 			className="flex justify-between items-center w-full h-28 px-[4.5rem] pt-9 fixed top-0 left-0 z-10 mix-blend-difference"
 		>
 			<h1 className="text-5xl ">

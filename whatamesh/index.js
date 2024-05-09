@@ -56,7 +56,6 @@ const Whatamesh = ({
 				width: 'calc(100% - 9rem)',
 				height: 'calc(100% - 14rem)',
 				margin: '0 5rem',
-				marginTop: '7rem',
 				borderRadius: '2.5rem',
 				border: '2px solid rgba(255, 255, 255, .3)',
 				zIndex: -9,
