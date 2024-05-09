@@ -8,7 +8,7 @@ export const useScrollTop = (threshold = 150) => {
 			if (
 				window.scrollY > threshold &&
 				window.innerHeight + window.scrollY <
-					document.documentElement.scrollHeight
+					document.documentElement.scrollHeight - 200
 			) {
 				setScrolled(true)
 			} else {
