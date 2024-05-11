@@ -1,6 +1,7 @@
 'use client'
 import Link from 'next/link'
 import { forwardRef } from 'react'
+import { Magnetic } from './ui'
 
 const Contact = forwardRef(function Contact(
 	props,
@@ -19,15 +20,17 @@ const Contact = forwardRef(function Contact(
 					Let's get started
 				</p>
 
-				<div
-					ref={ref}
-					className="relative w-36 h-36 rounded-full flex flex-col justify-center items-center text-center p-4 mt-8 outline outline-1 leading-4"
-				>
-					<Link href="">
-						<p className="mr-4">Write a</p>
-						<p className="ml-4">Message</p>
-					</Link>
-				</div>
+				<Magnetic>
+					<div
+						ref={ref}
+						className="relative w-36 h-36 rounded-full flex flex-col justify-center items-center text-center p-4 mt-8 outline outline-1 leading-4"
+					>
+						<Link href="">
+							<p className="mr-4">Write a</p>
+							<p className="ml-4">Message</p>
+						</Link>
+					</div>
+				</Magnetic>
 
 				{/* <div className="h-40 w-40 my-14 mx-auto bg-white">
 					<Link href="" className="relative cursor-none pointer-events-none">
