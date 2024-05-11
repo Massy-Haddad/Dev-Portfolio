@@ -1,9 +1,14 @@
 'use client'
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import { motion, useMotionValue, useSpring } from 'framer-motion'
 
-export default function cursor() {
+export default function cursor({
+	stickyElement,
+}: {
+	stickyElement: React.RefObject<HTMLDivElement>
+}) {
 	const cursorSize = 24
+	const cursorHalfSize = cursorSize / 2
 
 	const mouse = {
 		x: useMotionValue(0),
@@ -23,12 +28,15 @@ export default function cursor() {
 	// Takes care of the cursor movement
 	const manageMouseMove = (e: MouseEvent) => {
 		const { clientX, clientY } = e as MouseEvent
-		mouse.x.set(clientX - cursorSize / 2)
-		mouse.y.set(clientY - cursorSize / 2)
+
+		mouse.x.set(clientX - cursorHalfSize)
+		mouse.y.set(clientY - cursorHalfSize)
 	}
 
 	useEffect(() => {
+		// Takes care of the cursor movement
 		window.addEventListener('mousemove', manageMouseMove)
+
 		return () => {
 			window.removeEventListener('mousemove', manageMouseMove)
 		}

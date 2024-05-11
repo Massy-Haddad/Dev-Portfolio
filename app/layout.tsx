@@ -19,9 +19,10 @@ export default function RootLayout({
 	children: React.ReactNode
 }) {
 	return (
+		// As long as we use locomotive-scroll, we can't use the smooth scroll
 		// <html lang="fr" className="!scroll-smooth">
-		<html lang="fr">
-			<body className={`${myFont.className}`}>
+		<html lang="en">
+			<body className={`${myFont.className} mix-blend-normal`}>
 				<div className="WhatameshWrapper">
 					<Whatamesh />
 				</div>

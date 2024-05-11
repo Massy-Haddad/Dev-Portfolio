@@ -1,5 +1,5 @@
 'use client'
-import { useEffect } from 'react'
+import { useEffect, useRef } from 'react'
 import {
 	Banner,
 	Header,
@@ -21,17 +21,19 @@ export default function Home() {
 		})()
 	}, [])
 
+	const stickyElement = useRef(null)
+
 	return (
 		<main>
 			{/* <Banner /> */}
-			<Cursor />
+			<Cursor stickyElement={stickyElement} />
 			<Header />
 			<Hero />
 			<About />
 			<Projects />
 			{/* <Skills /> */}
 			{/* <Experience /> */}
-			<Contact />
+			<Contact ref={stickyElement} />
 			<Footer />
 		</main>
 	)
