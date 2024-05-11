@@ -31,17 +31,6 @@ const Contact = forwardRef(function Contact(
 						</Link>
 					</div>
 				</Magnetic>
-
-				{/* <div className="h-40 w-40 my-14 mx-auto bg-white">
-					<Link href="" className="relative cursor-none pointer-events-none">
-						<div className="circle1 absolute w-40 h-40 left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2"></div>
-						<div className="circle2 absolute w-40 h-40 left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2"></div>
-						<div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 text-xl">
-							<p className="text-xl -ml-4">get in</p>
-							<p className="text-xl">touch</p>
-						</div>
-					</Link>
-				</div> */}
 			</div>
 		</section>
 	)
