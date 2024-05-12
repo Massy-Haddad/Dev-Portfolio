@@ -1,7 +1,7 @@
 import { useRef, useState } from 'react'
 import { motion } from 'framer-motion'
 
-export default function Magnetic({ children }: { children: React.ReactNode }) {
+export default function magnetic({ children }: { children: React.ReactNode }) {
 	const ref = useRef(null)
 	const [position, setPosition] = useState({ x: 0, y: 0 })
 

@@ -10,9 +10,9 @@ const Contact = forwardRef(function Contact(
 	return (
 		<section
 			id="contact"
-			className="contact flex justify-center items-center h-[calc(100vh-14rem)] w-screen "
+			className="contact flex justify-center items-center h-auto w-screen "
 		>
-			<div className="h-full w-[calc(100%-9rem)] flex flex-col items-center justify-center mx-20 rounded-[2.5rem]">
+			<div className="h-[calc(100vh-14rem)] w-[calc(100%-9rem)] mt-28 flex flex-col items-center justify-center mx-20 rounded-[2.5rem]">
 				<p className="text-2xl -tracking-[0.075rem]">
 					I’d love to hear about your project
 				</p>

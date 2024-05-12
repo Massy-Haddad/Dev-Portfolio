@@ -1,10 +1,31 @@
+'use client'
+import { useState } from 'react'
+
+import { Modal, Project } from './ui'
+import { projectsData } from '@/lib/data'
+
 export default function Projects() {
+	const [modal, setModal] = useState({ active: false, index: 0 })
+
 	return (
 		<section
 			id="projects"
-			className="scroll-mt-28 flex justify-center items-center h-screen w-screen"
+			className="flex items-center justify-center h-screen"
 		>
-			Projects
+			<div className="flex flex-col items-center justify-center w-full px-[4.5rem]">
+				{projectsData.map((project, index) => {
+					return (
+						<Project
+							key={index}
+							index={index}
+							title={project.title}
+							setModal={setModal}
+						/>
+					)
+				})}
+			</div>
+
+			<Modal modal={modal} />
 		</section>
 	)
 }

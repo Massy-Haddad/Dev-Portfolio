@@ -6,6 +6,7 @@ import { LuGraduationCap } from 'react-icons/lu'
 // Images
 import figurestoreImg from '@/public/assets/projects/figure-store.png'
 import hashiraImg from '@/public/assets/projects/hashira.png'
+import silencioImg from '@/public/assets/projects/silencio.png'
 
 export const socials = [
 	{
@@ -73,25 +74,41 @@ export const experiencesData = [
 ] as const
 
 export const projectsData = [
+	// FAKE PROJECT NAMED SILENCIO
+	{
+		title: 'Silencio',
+		description: 'Un projet de UI/UX',
+		tags: ['React', 'Scss', 'All'],
+		url: 'https://silencio.vercel.app/',
+		image: silencioImg,
+		color: '#f7f7f7',
+	},
 	{
 		title: 'Figure Store',
 		description:
 			'Mon premier projet e-commerce. Le thème de celui-ci est en lien avec la pop culture, à savoir les figurines.',
 		tags: ['React', 'Next.js', 'Framer', 'Sanity', 'All'],
-		imageUrl: figurestoreImg,
+		url: 'https://massy-store.vercel.app/',
+		image: silencioImg,
+		color: '#f7f7f7',
 	},
 	{
 		title: 'Portfolio (ancien)',
 		description:
 			'Mon ancien portfolio de développeur (celui-ci est toujours en ligne, mais ne sera plus mis à jour).',
 		tags: ['React', 'Framer', 'Sanity.io', 'All'],
+		url: 'https://massy-haddad.vercel.app/',
+		image: silencioImg,
+		color: '#f7f7f7',
 	},
 	{
 		title: 'Hashira',
 		description:
 			"Un projet de UI/UX dans lequel j'ai implémenté une maquette de Figma. (Crédit à l'auteur de la maquette : Adi Bivaga)",
 		tags: ['React', 'Scss', 'All'],
-		imageUrl: hashiraImg,
+		url: 'https://hashira.vercel.app/',
+		image: hashiraImg,
+		color: '#f7f7f7',
 	},
 ] as const
 

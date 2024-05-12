@@ -6,7 +6,7 @@ import { Menu, Transition } from '@headlessui/react'
 import { RxHamburgerMenu } from 'react-icons/rx'
 import { routes } from '@/lib/data'
 
-export default function NavigationDropdown() {
+export default function navigationDropdown() {
 	return (
 		<Menu as="div" className="ml-2 -my-1 lg:hidden">
 			<div>
