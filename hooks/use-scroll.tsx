@@ -1,11 +1,15 @@
 import { useState, useEffect } from 'react'
 
-export const useScrollTop = (threshold = 150) => {
+export const useScroll = (threshold = 150) => {
 	const [scrolled, setScrolled] = useState(false)
 
 	useEffect(() => {
 		const handleScroll = () => {
-			if (window.scrollY > threshold) {
+			if (
+				window.scrollY > threshold &&
+				window.innerHeight + window.scrollY <
+					document.documentElement.scrollHeight - 200
+			) {
 				setScrolled(true)
 			} else {
 				setScrolled(false)

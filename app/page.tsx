@@ -1,5 +1,5 @@
 'use client'
-import { useEffect } from 'react'
+import { useEffect, useState, useRef } from 'react'
 import {
 	Banner,
 	Header,
@@ -17,21 +17,23 @@ export default function Home() {
 	useEffect(() => {
 		;(async () => {
 			const LocomotiveScroll = (await import('locomotive-scroll')).default
-			const locomotiveScroll = new LocomotiveScroll()
+			new LocomotiveScroll()
 		})()
 	}, [])
+
+	const stickyElement = useRef(null)
 
 	return (
 		<main>
 			{/* <Banner /> */}
-			<Cursor />
+			<Cursor stickyElement={stickyElement} />
 			<Header />
 			<Hero />
 			<About />
 			<Projects />
 			{/* <Skills /> */}
 			{/* <Experience /> */}
-			<Contact />
+			<Contact ref={stickyElement} />
 			<Footer />
 		</main>
 	)

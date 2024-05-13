@@ -1,3 +1,6 @@
 export { default as NavigationDropdown } from './navigation-dropdown'
 export { default as Cursor } from './cursor'
+export { default as Magnetic } from './magnetic'
 export { default as Button } from './button'
+export { default as Project } from './project'
+export { default as Modal } from './modal'
