@@ -2,11 +2,12 @@
 import Link from 'next/link'
 import { motion } from 'framer-motion'
 
-import clsx from 'clsx'
-import { routes } from '@/lib/data'
-import { useScrollTop } from '@/hooks/use-scroll-top'
-import { useActiveSectionContext } from '@/context/active-section-context'
 import { Button } from './ui'
+import { routes } from '@/lib/data'
+import { useScroll } from '@/hooks/use-scroll'
+
+import localFont from 'next/font/local'
+const myFont = localFont({ src: '../fonts/against regular.otf' })
 
 console.log(
 	'%c Dev by - Massy Haddad -  https://massyh.com',
@@ -14,7 +15,7 @@ console.log(
 )
 
 export default function Header() {
-	const scrolledTop = useScrollTop()
+	const scrolled = useScroll()
 
 	const menu = {
 		visible: {
@@ -25,7 +26,6 @@ export default function Header() {
 			y: '-100%',
 			transition: {
 				duration: 0.75,
-				// delay: 0.35,
 				type: 'tween',
 				ease: [0.76, 0, 0.24, 1],
 			},
@@ -36,10 +36,10 @@ export default function Header() {
 		<motion.header
 			variants={menu}
 			initial="visible"
-			animate={scrolledTop ? 'hidden' : 'visible'}
+			animate={scrolled ? 'hidden' : 'visible'}
 			className="flex justify-between items-center w-full h-28 px-[4.5rem] pt-9 fixed top-0 left-0 z-10 mix-blend-difference"
 		>
-			<h1 className="text-5xl ">
+			<h1 className={`${myFont.className} text-5xl`}>
 				<Link href="/">Massy H.</Link>
 			</h1>
 

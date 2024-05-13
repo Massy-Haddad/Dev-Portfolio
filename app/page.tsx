@@ -17,14 +17,14 @@ export default function Home() {
 	useEffect(() => {
 		;(async () => {
 			const LocomotiveScroll = (await import('locomotive-scroll')).default
-			const locomotiveScroll = new LocomotiveScroll()
+			new LocomotiveScroll()
 		})()
 	}, [])
 
 	const stickyElement = useRef(null)
 
 	return (
-		<main className="divide-y divide-opacity-5">
+		<main>
 			{/* <Banner /> */}
 			<Cursor stickyElement={stickyElement} />
 			<Header />
