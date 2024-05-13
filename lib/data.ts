@@ -4,9 +4,11 @@ import { FaReact } from 'react-icons/fa'
 import { LuGraduationCap } from 'react-icons/lu'
 
 // Images
-import figurestoreImg from '@/public/assets/projects/figure-store.png'
-import hashiraImg from '@/public/assets/projects/hashira.png'
 import silencioImg from '@/public/assets/projects/silencio.png'
+import figureStoreImg from '@/public/assets/projects/figure-store.png'
+import hashiraImg from '@/public/assets/projects/hashira.png'
+import portfolioImg from '@/public/assets/projects/portfolio.png'
+import portfolioOldImg from '@/public/assets/projects/portfolio-old.png'
 
 export const socials = [
 	{
@@ -75,39 +77,48 @@ export const experiencesData = [
 
 export const projectsData = [
 	// FAKE PROJECT NAMED SILENCIO
-	{
-		title: 'Silencio',
-		description: 'Un projet de UI/UX',
-		tags: ['React', 'Scss', 'All'],
-		url: 'https://silencio.vercel.app/',
-		image: silencioImg,
-		color: '#f7f7f7',
-	},
+	// {
+	// 	title: 'Silencio',
+	// 	description: 'Un projet de UI/UX',
+	// 	tags: ['React', 'Scss', 'All'],
+	// 	url: 'https://silencio.vercel.app/',
+	// 	image: silencioImg,
+	// 	color: '#f7f7f7',
+	// },
 	{
 		title: 'Figure Store',
 		description:
-			'Mon premier projet e-commerce. Le thème de celui-ci est en lien avec la pop culture, à savoir les figurines.',
+		'Mon premier projet e-commerce. Le thème de celui-ci est en lien avec la pop culture, à savoir les figurines.',
 		tags: ['React', 'Next.js', 'Framer', 'Sanity', 'All'],
 		url: 'https://massy-store.vercel.app/',
-		image: silencioImg,
-		color: '#f7f7f7',
-	},
-	{
-		title: 'Portfolio (ancien)',
-		description:
-			'Mon ancien portfolio de développeur (celui-ci est toujours en ligne, mais ne sera plus mis à jour).',
-		tags: ['React', 'Framer', 'Sanity.io', 'All'],
-		url: 'https://massy-haddad.vercel.app/',
-		image: silencioImg,
+		image: figureStoreImg,
 		color: '#f7f7f7',
 	},
 	{
 		title: 'Hashira',
 		description:
-			"Un projet de UI/UX dans lequel j'ai implémenté une maquette de Figma. (Crédit à l'auteur de la maquette : Adi Bivaga)",
+		"Un projet de UI/UX dans lequel j'ai implémenté une maquette de Figma. (Crédit à l'auteur de la maquette : Adi Bivaga)",
 		tags: ['React', 'Scss', 'All'],
 		url: 'https://hashira.vercel.app/',
 		image: hashiraImg,
+		color: '#f7f7f7',
+	},
+	{
+		title: 'Portfolio',
+		description:
+			"Mon portfolio de développeur. J'ai décidé de le refaire pour qu'il soit plus moderne et plus performant.",
+		tags: ['React', 'Framer', 'All'],
+		url: 'https://massy.vercel.app/',
+		image: portfolioImg,
+		color: '#f7f7f7',
+	},
+	{
+		title: 'Portfolio (old)',
+		description:
+			'Mon ancien portfolio de développeur (celui-ci est toujours en ligne, mais ne sera plus mis à jour).',
+		tags: ['React', 'Framer', 'Sanity.io', 'All'],
+		url: 'https://massy-haddad.vercel.app/',
+		image: portfolioOldImg,
 		color: '#f7f7f7',
 	},
 ] as const

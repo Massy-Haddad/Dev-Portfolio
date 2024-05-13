@@ -24,7 +24,7 @@ export default function Home() {
 	const stickyElement = useRef(null)
 
 	return (
-		<main>
+		<main className="divide-y divide-opacity-5">
 			{/* <Banner /> */}
 			<Cursor stickyElement={stickyElement} />
 			<Header />

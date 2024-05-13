@@ -57,35 +57,35 @@ export default function modal({
 			initial="initial"
 			animate={active ? 'open' : 'closed'}
 			id="modal"
-			className="absolute h-[250px] w-[350px] rounded-md overflow-hidden pointer-events-none
-            backdrop-filter backdrop-blur-lg backdrop-saturate-[180%] bg-[rgba(17,_25,_40,_0.75)] rounded-[12px] border-[1px] border-[solid] border-[rgba(255,255,255,0.125)]"
+			className="p-1 absolute flex flex-col justify-between h-[250px] w-[350px] rounded-xl pointer-events-none overflow-hidden bg-[#a1a1a1] backdrop-filter backdrop-blur-md"
 		>
-			<div id="tools" className="flex items-center w-full gap-1 p-2">
-				{[1, 2, 3].map((item) => (
-					<span className="bg-[#515151] inline-block w-3 h-3 p-1 rounded-full" />
+			<div
+				id="tools"
+				className="relative flex items-center w-full gap-1 p-1 mix-blend-difference"
+			>
+				{[1, 2, 3].map(() => (
+					<span className="bg-[#515151] inline-block p-1 rounded-full" />
 				))}
 			</div>
 
-			<div
-				style={{ top: index * -100 + '%' }}
-				className="absolute h-full w-full mt-3 p-[3px] transition-[top] duration-500 ease-[cubic-bezier(0.76,0,0.24,1)]"
-			>
-				{projectsData.map((project: ProjectProps, index) => {
-					return (
-						<div
-							className="relative flex items-center justify-center h-full w-full"
-							key={index}
-						>
+			<div className="relative flex items-center justify-center flex-row h-full w-full rounded-lg overflow-hidden">
+				<div
+					style={{ top: index * -100 + '%' }}
+					className="absolute h-full w-full transition-[top] duration-500 ease-[cubic-bezier(0.76,0,0.24,1)]"
+				>
+					{projectsData.map((project: ProjectProps, index) => {
+						return (
 							<Image
+								key={index}
 								src={project.image}
 								alt={'Image of project' + project.title}
-								width={300}
-								height={0}
-								className="h-auto w-full rounded-md"
+								width={0}
+								height={300}
+								className="w-full h-full object-cover"
 							/>
-						</div>
-					)
-				})}
+						)
+					})}
+				</div>
 			</div>
 		</motion.div>
 	)

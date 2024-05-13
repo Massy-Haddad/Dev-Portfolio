@@ -15,10 +15,10 @@ export default function project({
 			onMouseEnter={() => setModal({ active: true, index })}
 			onMouseLeave={() => setModal({ active: false, index })}
 		>
-			<h2 className="text-3xl font-normal group-hover:-translate-x-4 transition-all duration-200 ease-linear">
+			<h2 className="text-5xl font-normal group-hover:-translate-x-4 transition-all duration-200 ease-linear">
 				{title}
 			</h2>
-			<p className="font-light group-hover:-translatex-4 transition-all duration-200 ease-linear">
+			<p className="text-xl font-light group-hover:-translatex-4 transition-all duration-200 ease-linear">
 				Design & Development
 			</p>
 		</div>
