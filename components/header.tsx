@@ -39,7 +39,7 @@ export default function Header() {
 			animate={scrolled ? 'hidden' : 'visible'}
 			className="flex justify-between items-center w-full h-28 px-[4.5rem] pt-9 fixed top-0 left-0 z-10 mix-blend-difference"
 		>
-			<h1 className={`${myFont.className} text-5xl`}>
+			<h1 className={`${myFont.className} text-4xl`}>
 				<Link href="/">Massy H.</Link>
 			</h1>
 
