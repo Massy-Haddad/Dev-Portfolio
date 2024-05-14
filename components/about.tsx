@@ -1,10 +1,15 @@
+'use client'
+
+import { Divider } from './ui'
+
 export default function About() {
 	return (
 		<section
 			id="about"
-			className="scroll-mt-28 flex justify-center items-center h-screen w-screen"
+			className="relative flex flex-col justify-center items-center h-screen w-screen text-white"
 		>
-			About
+			<Divider />
+			<p>test</p>
 		</section>
 	)
 }

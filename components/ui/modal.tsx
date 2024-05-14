@@ -63,8 +63,11 @@ export default function modal({
 				id="tools"
 				className="relative flex items-center w-full gap-1 p-1 mix-blend-difference"
 			>
-				{[1, 2, 3].map(() => (
-					<span className="bg-[#515151] inline-block p-1 rounded-full" />
+				{[1, 2, 3].map((index) => (
+					<span
+						key={index}
+						className="bg-[#515151] inline-block p-1 rounded-full"
+					/>
 				))}
 			</div>
 
