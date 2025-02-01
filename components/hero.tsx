@@ -1,6 +1,4 @@
 'use client'
-
-// import arrow icon fron react-icons
 import { FaArrowDown } from 'react-icons/fa'
 
 export default function Intro() {
@@ -25,12 +23,10 @@ export default function Intro() {
 
 					<div className="relative inline-block h-32 w-[60rem] ml-12 translate-x-12">
 						<div className="absolute left-0">developer</div>
-						<div className="absolute left-[80%] top-6 font-medium text-xl leading-[1.7rem] -tracking-[0.03rem] text-wrap w-[16rem]">
-							<span className="block text-right">A passionate software</span>
-							<span className="block text-left">
-								engineering student driven by curiosity and a thirst for
-								knowledge.
-							</span>
+						<div className="absolute left-[80%] top-6 font-medium text-xl leading-normal -tracking-[0.03rem] text-wrap w-[16rem]">
+							<span className="block text-left">Transforming</span>
+							<span className="block text-left">complex problems</span>
+							<span className="block text-left">into simple solutions</span>
 						</div>
 					</div>
 				</div>

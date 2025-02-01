@@ -1,6 +1,7 @@
+'use client'
 import Link from 'next/link'
-import { Button } from './ui'
 import { socials } from '@/lib/data'
+import { Button } from '@/components/ui'
 
 export default function Footer() {
 	return (

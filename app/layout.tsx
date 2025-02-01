@@ -30,7 +30,7 @@ export default function RootLayout({
 				<ThemeContextProvider>
 					<ActiveSectionContextProvider>
 						{children}
-						{/* <ThemeSwitch /> */}
+						<ThemeSwitch />
 					</ActiveSectionContextProvider>
 				</ThemeContextProvider>
 			</body>

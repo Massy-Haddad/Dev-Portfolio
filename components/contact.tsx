@@ -1,7 +1,7 @@
 'use client'
 import Link from 'next/link'
 import { forwardRef } from 'react'
-import { Magnetic } from './ui'
+import { Magnetic } from '@/components/ui'
 
 const Contact = forwardRef(function Contact(
 	props,

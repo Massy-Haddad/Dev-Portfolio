@@ -1,8 +1,8 @@
 'use client'
 import { useState } from 'react'
 
-import { Modal, Project } from './ui'
 import { projectsData } from '@/lib/data'
+import { Modal, Project } from '@/components/ui'
 
 export default function Projects() {
 	const [modal, setModal] = useState({ active: false, index: 0 })
