@@ -1,6 +1,6 @@
 'use client'
 
-import { Divider } from './ui'
+import { Divider } from '@/components/ui'
 
 export default function About() {
 	return (
